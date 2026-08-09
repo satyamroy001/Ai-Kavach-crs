@@ -1,5 +1,5 @@
 # AI Kavach — Autonomous Cyber Reasoning System
-# Name- PRAGYAN-BHARAT 🇮🇳 (Made in India)
+# PRAGYAN-BHARAT 🇮🇳 (Made in India)
 An LLM-driven system that autonomously **finds**, **patches**, and **proves the fix** for
 software vulnerabilities in defence-relevant infrastructure — including binary-only,
 air-gapped, legacy targets where source code and internet access aren't guaranteed.
