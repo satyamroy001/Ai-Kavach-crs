@@ -66,10 +66,10 @@ section is kept honest and updated as the project progresses, not written all at
 ## Roadmap
 
 - [x] Architecture design
-- [ ] Environment + toolchain setup
-- [ ] Demo vulnerable target
-- [ ] Manual fuzzing baseline (AFL++)
-- [ ] LLM-based crash triage
+- [x] Environment + toolchain setup
+- [x] Demo vulnerable target
+- [x] Manual fuzzing baseline (AFL++)
+- [x] LLM-based crash triage
 - [ ] Attack reachability graph (prototype)
 - [ ] LLM-based patch generation (multi-candidate)
 - [ ] Adversarial verification agent ("Cyber Courtroom")
@@ -85,7 +85,7 @@ section is kept honest and updated as the project progresses, not written all at
 - Fuzzing: AFL++
 - Static analysis: CodeQL, Semgrep
 - Dynamic analysis: AddressSanitizer (ASan)
-- Binary analysis: Ghidra, angr
+- Binary analysis: Ghidra.
 - LLM: Ollama (local, offline) — Qwen2.5-Coder
 - Orchestration: Python
 - Target language (initial): C
