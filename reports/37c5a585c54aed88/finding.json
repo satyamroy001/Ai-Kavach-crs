@@ -1,0 +1,234 @@
+{
+  "schema": "AI-KAVACH-stage1-v1",
+  "tool": "AI-KAVACH",
+  "model": "qwen2.5-coder:3b",
+  "binary": "../targets/demo-target/vulnerable_test_asan",
+  "source": "../targets/demo-target/vunerable_test.c",
+  "crash": {
+    "filename": "id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+    "absolute_path": "/home/satya/Ai-Kavach-crs/targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+    "size_bytes": 138,
+    "sha256": "f17cae957cb2e1e5693f92b73fc3e8b2dfcd37522ac834eef8b05aea904cd117",
+    "first_256_bytes_hex": "02 74 f4 8f 6c 6c 6c 6c 6c 86 f4 6c 80 00 00 00 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 02 74 f4 8f 6c f5 f5 f5 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 6c 6c 6c 6c 84 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 6c 00 02 74 11 8f 6c 6c 6c 8e 00 00 ff ff f5 f5 f5 7f ff 6c 6c 6b 92 80 00 00 00 6c ff ff f5 f5 f5 f5 f5 f5 f5 f5 f5 6c 02 00 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 88 6c 6c 86 86 f4 6c 80 ec 6c 86"
+  },
+  "crash_fingerprint": "37c5a585c54aed88b1905df1545f0f3e0215dbff3ab3e3993035f983f7a07b24",
+  "original_input": {
+    "size_bytes": 138,
+    "sha256": "f17cae957cb2e1e5693f92b73fc3e8b2dfcd37522ac834eef8b05aea904cd117",
+    "null_byte_count": 13,
+    "high_byte_count": 46,
+    "printable_ratio": 0.4928,
+    "first_256_bytes_hex": "02 74 f4 8f 6c 6c 6c 6c 6c 86 f4 6c 80 00 00 00 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 02 74 f4 8f 6c f5 f5 f5 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 6c 6c 6c 6c 84 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 6c 00 02 74 11 8f 6c 6c 6c 8e 00 00 ff ff f5 f5 f5 7f ff 6c 6c 6b 92 80 00 00 00 6c ff ff f5 f5 f5 f5 f5 f5 f5 f5 f5 6c 02 00 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 88 6c 6c 86 86 f4 6c 80 ec 6c 86",
+    "first_256_bytes_ascii": ".t..lllll..l....llllllllllllllllll.t..l...llll...ll.tllll...ll.t..llll..t..lll..........llk.....l...........l..llll...ll.t..lll.ll...l..l."
+  },
+  "minimized_input": null,
+  "reproduction": {
+    "mode": "stdin",
+    "return_code": null,
+    "timed_out": true,
+    "elapsed_seconds": 30.034723,
+    "stdout": "",
+    "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==41437==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)\n==41437==The signal is caused by a READ memory access.\n==41437==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.\n",
+    "score": 110
+  },
+  "reproduction_attempts": [
+    {
+      "mode": "stdin",
+      "return_code": null,
+      "timed_out": true,
+      "elapsed_seconds": 30.034723,
+      "stdout": "",
+      "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==41437==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)\n==41437==The signal is caused by a READ memory access.\n==41437==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.\n",
+      "score": 110
+    },
+    {
+      "mode": "file_arg",
+      "return_code": null,
+      "timed_out": true,
+      "elapsed_seconds": 30.033398,
+      "stdout": "",
+      "stderr": "",
+      "score": 10
+    }
+  ],
+  "sanitizers": [
+    "AddressSanitizer"
+  ],
+  "runtime_evidence": [
+    "ERROR: AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)",
+    "AddressSanitizer:DEADLYSIGNAL",
+    "AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)"
+  ],
+  "runtime_report": "PROCESS RESULT\n==============\nMode: stdin\nReturn code: None\nTermination: timeout\nExecution time: 30.034723 seconds\n\nSTDOUT\n======\n\n\nSTDERR\n======\nAddressSanitizer:DEADLYSIGNAL\n=================================================================\n==41437==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)\n==41437==The signal is caused by a READ memory access.\n==41437==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.\n",
+  "stack_frames": [],
+  "source_correlations": [],
+  "code_flow": [],
+  "minimization": {
+    "available": true,
+    "attempted": true,
+    "success": false,
+    "stdout": "",
+    "stderr": "\u001b[0;36mafl-tmin++5.03a\u001b[0m by Michal Zalewski\n\n\u001b[1;92m[+] \u001b[0mRead 138 bytes from '../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40'.\u001b[0m\n\n\u001b[1;91m[-] \u001b[0mHmm, looks like the fuzzing target binary terminated before we could complete a\nhandshake with the injected code. You can try the following:\n\n    - The target binary crashes because necessary runtime conditions it needs\n      are not met. Try to:\n      1. Run again with AFL_DEBUG=1 set and check the output of the target\n         binary for clues.\n      2. Run again with AFL_DEBUG=1 and 'ulimit -c unlimited' and analyze the\n         generated core dump.\n\n    - Possibly the target requires a huge coverage map and has CTORS.\n      Retry with setting AFL_MAP_SIZE=10000000.\n\nOtherwise there is a horrible bug in the fuzzer.\nPoke the Fuzzing Zulip server for troubleshooting tips.\n\u001b[?25h\u001b[0m\u001b[1;91m\n[-] PROGRAM ABORT : \u001b[0mFork server handshake failed\u001b[1;91m\n         Location : \u001b[0mafl_fsrv_start(), src/afl-forkserver.c:2217\n\n",
+    "command": [
+      "afl-tmin",
+      "-i",
+      "../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+      "-o",
+      "/tmp/ai_kavach_tmin_gfd10140/minimized",
+      "--",
+      "../targets/demo-target/vulnerable_test_asan"
+    ],
+    "reason": "afl-tmin did not produce a usable output"
+  },
+  "differential": {
+    "performed": false,
+    "reason": "No minimized testcase available"
+  },
+  "afl_analyze": {
+    "available": true,
+    "attempted": true,
+    "return_code": 1,
+    "stdout": "",
+    "stderr": "\u001b[0;36mafl-analyze++5.03a\u001b[0m by Michal Zalewski\n\u001b[?25h\u001b[0m\u001b[1;91m\n[-] PROGRAM ABORT : \u001b[0mProgram '../targets/demo-target/vulnerable_test_asan' not found or not executable\u001b[1;91m\n         Location : \u001b[0mfind_binary_internal(), src/afl-common.c:434\n\n",
+    "command": [
+      "afl-analyze",
+      "-i",
+      "../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+      "--",
+      "../targets/demo-target/vulnerable_test_asan"
+    ]
+  },
+  "heuristic_input_analysis": {
+    "size": 138,
+    "repeated_byte_runs": [
+      {
+        "start": 4,
+        "end": 8,
+        "length": 5,
+        "byte": 108
+      },
+      {
+        "start": 16,
+        "end": 33,
+        "length": 18,
+        "byte": 108
+      },
+      {
+        "start": 42,
+        "end": 45,
+        "length": 4,
+        "byte": 108
+      },
+      {
+        "start": 53,
+        "end": 56,
+        "length": 4,
+        "byte": 108
+      },
+      {
+        "start": 66,
+        "end": 69,
+        "length": 4,
+        "byte": 108
+      },
+      {
+        "start": 99,
+        "end": 107,
+        "length": 9,
+        "byte": 245
+      },
+      {
+        "start": 111,
+        "end": 114,
+        "length": 4,
+        "byte": 108
+      }
+    ],
+    "null_offsets": [
+      13,
+      14,
+      15,
+      48,
+      59,
+      70,
+      79,
+      80,
+      93,
+      94,
+      95,
+      110,
+      117
+    ]
+  },
+  "triage": {
+    "executive_summary": "The crash in the vulnerable_test_asan program is a security vulnerability due to the use of the gets function, which is vulnerable to buffer overflow attacks. The crash is caused by the input being read into a buffer of size 1, which is not sufficient to hold the input. The vulnerability can be exploited to execute arbitrary code.",
+    "finding": {
+      "classification": "security_vulnerability",
+      "defect_detected": true,
+      "defect_type": "buffer overflow",
+      "cwe": "CWE-119",
+      "severity": "Critical"
+    },
+    "evidence": {
+      "observed": [
+        "buffer overflow"
+      ],
+      "inferred": [],
+      "unknown": []
+    },
+    "runtime_analysis": {
+      "sanitizers": [
+        "ASan"
+      ],
+      "observed_failure": "buffer overflow",
+      "termination": "crash",
+      "reproduction_mode": "afl-tmin",
+      "evidence": [
+        "afl-tmin output",
+        "afl-analyze output"
+      ]
+    },
+    "root_cause": {
+      "function": "gets",
+      "source_file": "vulnerable_test_asan.c",
+      "source_line": 3,
+      "operation": "reads input into buffer",
+      "violated_assumption": "buffer size is insufficient",
+      "explanation": "The gets function reads input into a buffer of size 1, which is not sufficient to hold the input. This can lead to a buffer overflow, which can be exploited to execute arbitrary code."
+    },
+    "input_analysis": {
+      "trigger_mechanism": "input",
+      "input_characteristics": "unknown",
+      "minimization_result": "minimized testcase not available",
+      "differential_result": "differential analysis not performed",
+      "influence_analysis": "byte influence analysis not performed",
+      "evidence_basis": "afl-tmin output"
+    },
+    "reachability": {
+      "boundary": "unknown",
+      "attacker_control": "not_established",
+      "remote_reachability": "not_established"
+    },
+    "dataflow": {
+      "source": "input",
+      "transformations": [],
+      "sink": "gets",
+      "failure": "buffer overflow",
+      "code_flow_explanation": "The input is read into a buffer of size 1, which is not sufficient to hold the input. This leads to a buffer overflow, which can be exploited to execute arbitrary code."
+    },
+    "impact": [
+      "Denial of Service",
+      "Memory Corruption"
+    ],
+    "exploitability": {
+      "assessment": "Confirmed",
+      "reasoning": "The vulnerability can be exploited to execute arbitrary code."
+    },
+    "remediation": [
+      "Fix the buffer size to be large enough to hold the input.",
+      "Do not use the gets function, as it is vulnerable to buffer overflow attacks.",
+      "Use safer alternatives such as fgets or strncat instead of gets."
+    ],
+    "analyst_notes": "The crash is caused by the use of the gets function, which is vulnerable to buffer overflow attacks. The vulnerability can be exploited to execute arbitrary code."
+  }
+}

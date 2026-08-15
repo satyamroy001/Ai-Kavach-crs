@@ -1,0 +1,12 @@
+{
+  "crash": {
+    "filename": "id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+    "absolute_path": "/home/satya/Ai-Kavach-crs/targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40",
+    "size_bytes": 138,
+    "sha256": "f17cae957cb2e1e5693f92b73fc3e8b2dfcd37522ac834eef8b05aea904cd117",
+    "first_256_bytes_hex": "02 74 f4 8f 6c 6c 6c 6c 6c 86 f4 6c 80 00 00 00 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 02 74 f4 8f 6c f5 f5 f5 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 6c 6c 6c 6c 84 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 6c 00 02 74 11 8f 6c 6c 6c 8e 00 00 ff ff f5 f5 f5 7f ff 6c 6c 6b 92 80 00 00 00 6c ff ff f5 f5 f5 f5 f5 f5 f5 f5 f5 6c 02 00 6c 6c 6c 6c 92 f4 00 6c 6c 02 74 11 8f 6c 6c 6c 88 6c 6c 86 86 f4 6c 80 ec 6c 86"
+  },
+  "fingerprint": "37c5a585c54aed88b1905df1545f0f3e0215dbff3ab3e3993035f983f7a07b24",
+  "source": "/home/satya/Ai-Kavach-crs/targets/demo-target/vunerable_test.c",
+  "generated_at_unix": 1786814777.520893
+}

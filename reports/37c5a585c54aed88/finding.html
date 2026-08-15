@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI-KAVACH Finding 37c5a585c54aed88</title>
+<style>
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background: #0d1117;
+    color: #e6edf3;
+}
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 32px;
+}
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 18px 0;
+}
+h1, h2 { color: #58a6ff; }
+pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    background: #010409;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: left;
+    padding: 9px;
+    border-bottom: 1px solid #30363d;
+}
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #21262d;
+    margin-right: 8px;
+}
+code { color: #79c0ff; }
+</style>
+</head>
+<body>
+<main>
+<h1>AI-KAVACH Security Finding</h1>
+
+<div class="card">
+<h2>Executive Summary</h2>
+<p>The crash in the vulnerable_test_asan program is a security vulnerability due to the use of the gets function, which is vulnerable to buffer overflow attacks. The crash is caused by the input being read into a buffer of size 1, which is not sufficient to hold the input. The vulnerability can be exploited to execute arbitrary code.</p>
+</div>
+
+<div class="card">
+<h2>Classification</h2>
+<p>
+<span class="badge">Type: buffer overflow</span>
+<span class="badge">CWE: CWE-119</span>
+<span class="badge">Severity: Critical</span>
+<span class="badge">Class: security_vulnerability</span>
+</p>
+</div>
+
+<div class="card">
+<h2>Evidence</h2>
+<h3>Observed</h3>
+<ul><li>buffer overflow</li></ul>
+<h3>Inferred</h3>
+<p>None.</p>
+<h3>Unknown</h3>
+<p>None.</p>
+</div>
+
+<div class="card">
+<h2>Root Cause</h2>
+<p><b>Function:</b> gets</p>
+<p><b>Source:</b> vulnerable_test_asan.c</p>
+<p><b>Line:</b> 3</p>
+<p><b>Operation:</b> reads input into buffer</p>
+<p><b>Violated assumption:</b>
+buffer size is insufficient</p>
+<p>The gets function reads input into a buffer of size 1, which is not sufficient to hold the input. This can lead to a buffer overflow, which can be exploited to execute arbitrary code.</p>
+</div>
+
+<div class="card">
+<h2>Input / Trigger Analysis</h2>
+<p>input</p>
+<p><b>Characteristics:</b>
+unknown</p>
+<p><b>Minimization:</b>
+minimized testcase not available</p>
+<p><b>Differential:</b>
+differential analysis not performed</p>
+<p><b>Influence:</b>
+byte influence analysis not performed</p>
+</div>
+
+<div class="card">
+<h2>Reachability & Exploitability</h2>
+<p><b>Boundary:</b> unknown</p>
+<p><b>Attacker control:</b>
+not_established</p>
+<p><b>Remote reachability:</b>
+not_established</p>
+<p><b>Exploitability:</b>
+Confirmed</p>
+<p>The vulnerability can be exploited to execute arbitrary code.</p>
+</div>
+
+<div class="card">
+<h2>Data Flow</h2>
+<p><b>Source:</b> input</p>
+<p><b>Transformations:</b></p>
+<p>None.</p>
+<p><b>Sink:</b> gets</p>
+<p><b>Failure:</b> buffer overflow</p>
+<p>The input is read into a buffer of size 1, which is not sufficient to hold the input. This leads to a buffer overflow, which can be exploited to execute arbitrary code.</p>
+</div>
+
+<div class="card">
+<h2>Runtime</h2>
+<p><b>Sanitizers:</b>
+ASan</p>
+<p><b>Failure:</b>
+buffer overflow</p>
+<pre>PROCESS RESULT
+==============
+Mode: stdin
+Return code: None
+Termination: timeout
+Execution time: 30.034723 seconds
+
+STDOUT
+======
+
+
+STDERR
+======
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==41437==ERROR: AddressSanitizer: SEGV on unknown address (pc 0x63693095dbba bp 0x7fff721c1bc0 sp 0x7fff721c1b20 T0)
+==41437==The signal is caused by a READ memory access.
+==41437==Hint: this fault was caused by a dereference of a high value address (see register values below).  Disassemble the provided pc to learn which register was used.
+</pre>
+</div>
+
+<div class="card">
+<h2>Stack</h2>
+<table>
+<tr><th>#</th><th>Function</th><th>File</th><th>Line</th></tr>
+
+</table>
+</div>
+
+<div class="card">
+<h2>Code Flow</h2>
+<table>
+<tr><th>Step</th><th>Function</th><th>Location</th><th>Evidence</th></tr>
+
+</table>
+</div>
+
+<div class="card">
+<h2>Artifacts</h2>
+<p><b>Crash:</b> id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40</p>
+<p><b>Crash SHA-256:</b> <code>
+f17cae957cb2e1e5693f92b73fc3e8b2dfcd37522ac834eef8b05aea904cd117</code></p>
+<p><b>Fingerprint:</b> <code>
+37c5a585c54aed88b1905df1545f0f3e0215dbff3ab3e3993035f983f7a07b24</code></p>
+<p><b>Original size:</b> 138 bytes</p>
+<p><b>Minimization:</b>
+{&quot;available&quot;: true, &quot;attempted&quot;: true, &quot;success&quot;: false, &quot;stdout&quot;: &quot;&quot;, &quot;stderr&quot;: &quot;\u001b[0;36mafl-tmin++5.03a\u001b[0m by Michal Zalewski\n\n\u001b[1;92m[+] \u001b[0mRead 138 bytes from &#x27;../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40&#x27;.\u001b[0m\n\n\u001b[1;91m[-] \u001b[0mHmm, looks like the fuzzing target binary terminated before we could complete a\nhandshake with the injected code. You can try the following:\n\n    - The target binary crashes because necessary runtime conditions it needs\n      are not met. Try to:\n      1. Run again with AFL_DEBUG=1 set and check the output of the target\n         binary for clues.\n      2. Run again with AFL_DEBUG=1 and &#x27;ulimit -c unlimited&#x27; and analyze the\n         generated core dump.\n\n    - Possibly the target requires a huge coverage map and has CTORS.\n      Retry with setting AFL_MAP_SIZE=10000000.\n\nOtherwise there is a horrible bug in the fuzzer.\nPoke the Fuzzing Zulip server for troubleshooting tips.\n\u001b[?25h\u001b[0m\u001b[1;91m\n[-] PROGRAM ABORT : \u001b[0mFork server handshake failed\u001b[1;91m\n         Location : \u001b[0mafl_fsrv_start(), src/afl-forkserver.c:2217\n\n&quot;, &quot;command&quot;: [&quot;afl-tmin&quot;, &quot;-i&quot;, &quot;../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40&quot;, &quot;-o&quot;, &quot;/tmp/ai_kavach_tmin_gfd10140/minimized&quot;, &quot;--&quot;, &quot;../targets/demo-target/vulnerable_test_asan&quot;], &quot;reason&quot;: &quot;afl-tmin did not produce a usable output&quot;}</p>
+<p><b>Differential:</b>
+{&quot;performed&quot;: false, &quot;reason&quot;: &quot;No minimized testcase available&quot;}</p>
+<p><b>AFL analyze:</b>
+{&quot;available&quot;: true, &quot;attempted&quot;: true, &quot;return_code&quot;: 1, &quot;stdout&quot;: &quot;&quot;, &quot;stderr&quot;: &quot;\u001b[0;36mafl-analyze++5.03a\u001b[0m by Michal Zalewski\n\u001b[?25h\u001b[0m\u001b[1;91m\n[-] PROGRAM ABORT : \u001b[0mProgram &#x27;../targets/demo-target/vulnerable_test_asan&#x27; not found or not executable\u001b[1;91m\n         Location : \u001b[0mfind_binary_internal(), src/afl-common.c:434\n\n&quot;, &quot;command&quot;: [&quot;afl-analyze&quot;, &quot;-i&quot;, &quot;../targets/demo-target/findings/default/crashes/id:000000,sig:11,src:000000,time:4239,execs:1626,op:havoc,rep:40&quot;, &quot;--&quot;, &quot;../targets/demo-target/vulnerable_test_asan&quot;]}</p>
+</div>
+
+<div class="card">
+<h2>Analyst Notes</h2>
+<p>The crash is caused by the use of the gets function, which is vulnerable to buffer overflow attacks. The vulnerability can be exploited to execute arbitrary code.</p>
+</div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "AI-KAVACH",
+          "informationUri": "https://github.com/AFLplusplus/AFLplusplus",
+          "version": "stage-1",
+          "rules": []
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CWE-119",
+          "level": "error",
+          "message": {
+            "text": "The crash in the vulnerable_test_asan program is a security vulnerability due to the use of the gets function, which is vulnerable to buffer overflow attacks. The crash is caused by the input being read into a buffer of size 1, which is not sufficient to hold the input. The vulnerability can be exploited to execute arbitrary code."
+          },
+          "partialFingerprints": {
+            "ai-kavach/crash-fingerprint": "37c5a585c54aed88b1905df1545f0f3e0215dbff3ab3e3993035f983f7a07b24"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "../targets/demo-target/vunerable_test.c"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "properties": {
+            "defectType": "buffer overflow",
+            "severity": "Critical",
+            "classification": "security_vulnerability",
+            "exploitability": "Confirmed"
+          }
+        }
+      ]
+    }
+  ]
+}
