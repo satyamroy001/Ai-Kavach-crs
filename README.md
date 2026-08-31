@@ -8,17 +8,13 @@ Built for the AI Kavach hackathon.
 
 ## Problem
 
-Real defence infrastructure often runs closed firmware and legacy C/C++ code with no
-build access, no source, and no internet connectivity. Existing autonomous vulnerability
-research — such as DARPA's AI Cyber Challenge (AIxCC), won by Team Atlanta's ATLANTIS
-system in August 2025 — targets open-source software with cloud LLM access and known
-source code. That's a different, easier constraint set than defence infrastructure
-actually presents.
+Defence and mission-critical infrastructure frequently operates under severe analysis constraints: legacy C/C++ code, closed firmware, limited build environments, incomplete source visibility, restricted execution environments, and zero external network connectivity. Conventional vulnerability-analysis workflows struggle in such conditions because they often depend on complete build pipelines, extensive dependencies, cloud-based intelligence, or isolated detection signals.
 
-This project adapts the same core idea — an LLM paired with fuzzers, static/dynamic
-analysis, and a regression harness — to that harder, more realistic environment, and adds
-reasoning layers a raw find-patch-verify loop doesn't have: knowing *whether an attacker
-can actually reach a bug*, and *whether a patch can be trusted*, not just whether it compiles.
+PRAGYAN-BHARAT addresses this gap through an evidence-driven autonomous security reasoning architecture that combines structural program intelligence, static analysis, dynamic fuzzing, sanitizer-based validation, security-relationship graphs, and local LLM reasoning. Rather than treating a suspicious pattern as a vulnerability, the system investigates the underlying execution path, data flow, ownership, lifetime, concurrency and attacker-reachable conditions.
+
+The architecture extends beyond conventional find–patch–verify automation by introducing multi-hypothesis reasoning, CWE-grounded verification, dual-LLM cross-examination, adversarial negative-feedback loops, and repair-safety validation. A generated patch is therefore evaluated not merely for compilation, but for root-cause removal, behavioral preservation, ownership/lifetime correctness, synchronization safety, secondary vulnerability prevention, and reproducibility.
+
+The objective is a self-contained cyber-reasoning pipeline capable of producing security decisions that are evidence-grounded, explainable, auditable and verifiable—even when the analysis environment is isolated from the internet.
 
 ## Architecture
 
