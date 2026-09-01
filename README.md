@@ -2,7 +2,7 @@
 
 ### Autonomous Cyber Reasoning & Vulnerability Triage System
 
-> **AI Kavach — Autonomous Cyber Reasoning System**
+> **AI Kavach — Autonomous Cyber Reasoning System** (Demo) 
 
 ![Project Demo](targets/demo-target/Animation1.gif)
 
