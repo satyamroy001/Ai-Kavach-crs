@@ -22,17 +22,28 @@ The system is designed around a simple principle:
 
 Basic structure for Fuzzing and CodeQL- Heart of Pragyan-
 
-                          │
-         ┌────────────────┼────────────────┐
-         ▼                ▼                ▼
-     ⚔️ ATTACKER      🛡️ DEFENDER      ⚖️ JUDGE
-   (Break the patch) (Explain fix)  (Evaluate evidence)
-         │                │                │
-         └────────────────┼────────────────┘
-                          ▼
-                 ✅ FINAL VERIFIED RESULT
+ AI-Powered Software Security Reasoning Engine
+
+Discover 🔎 → Reproduce 💥 → Correlate 🔗 → Reason 🧠 → Verify 🔬 → Repair 🛠️ → Assure 🛡️
 
 # PRAGYAN BHARAT WORKSPACE - Candidate Analysis Framework
+
+🧠 Evidence-Driven Security Reasoning: Converts heterogeneous static, dynamic, and runtime observations into a unified vulnerability hypothesis.
+🎯 Adaptive Analysis Orchestration: Selects the most relevant analysis path from source characteristics, language, execution model, and input surface instead of blindly executing every tool.
+🔗 Cross-Domain Evidence Correlation: Correlates CodeQL findings, fuzzing behavior, sanitizer diagnostics, execution paths, and source-level context before assigning confidence.
+💥 Crash-to-Root-Cause Reasoning: Transforms a raw fuzzing crash into a reproducible execution condition, fault location, root cause, and security impact.
+🧬 Runtime-Backed Static Verification: Uses concrete runtime evidence to validate whether statically identified data flows are actually reachable and security-relevant.
+🧠 Context-Compressed LLM Reasoning: Reduces massive tool output into high-signal security evidence before inference, minimizing token waste while preserving causal context.
+⚔️ Adversarial Candidate Verification: Every vulnerability hypothesis is challenged with contradictory evidence and independent reproduction before acceptance.
+🔄 Closed-Loop Vulnerability Reasoning: Discovery → Reproduction → Correlation → Hypothesis → Verification → Repair → Regression Validation.
+🛡️ Repair-Aware Security Analysis: Treats generated patches as untrusted candidates and subjects them to rebuild, runtime validation, sanitizer checks, and regression analysis.
+🚫 No Finding = No Automatic Trust: Absence of evidence from one analyzer never becomes evidence of safety.
+📊 Evidence-Weighted Confidence: Confidence increases through independent corroboration and decreases when execution, static analysis, or reproduction contradicts the hypothesis.
+🧩 Tool-Agnostic Security Orchestration: Analysis components are treated as evidence producers rather than authoritative decision makers.
+⚡ Signal-First Intelligence: Prioritizes security-relevant execution paths, sinks, inputs, crashes, and sanitizer traces instead of forwarding raw logs to the LLM.
+🔬 Reproducibility-Centric Detection: A candidate finding is strengthened by deterministic reproduction and weakened by failed reproduction.
+🧠 Reasoning Under Incomplete Evidence: Distinguishes confirmed, probable, plausible, inconclusive, and unverified conditions instead of forcing binary decisions.
+
 
 **Repository Architecture**
 
