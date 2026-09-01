@@ -6,19 +6,6 @@ air-gapped, legacy targets where source code and internet access aren't guarante
 
 Built for the AI Kavach hackathon.
 
-## Problem
-
-Real defence infrastructure often runs closed firmware and legacy C/C++ code with no
-build access, no source, and no internet connectivity. Existing autonomous vulnerability
-research — such as DARPA's AI Cyber Challenge (AIxCC), won by Team Atlanta's ATLANTIS
-system in August 2025 — targets open-source software with cloud LLM access and known
-source code. That's a different, easier constraint set than defence infrastructure
-actually presents.
-
-This project adapts the same core idea — an LLM paired with fuzzers, static/dynamic
-analysis, and a regression harness — to that harder, more realistic environment, and adds
-reasoning layers a raw find-patch-verify loop doesn't have: knowing *whether an attacker
-can actually reach a bug*, and *whether a patch can be trusted*, not just whether it compiles.
 
 ## Architecture
 
@@ -66,19 +53,19 @@ section is kept honest and updated as the project progresses, not written all at
 ## Roadmap
 
 - [x] Architecture design
-- [ ] Environment + toolchain setup
-- [ ] Demo vulnerable target
-- [ ] Manual fuzzing baseline (AFL++)
-- [ ] LLM-based crash triage
-- [ ] Attack reachability graph (prototype)
-- [ ] LLM-based patch generation (multi-candidate)
-- [ ] Adversarial verification agent ("Cyber Courtroom")
-- [ ] Confidence engine (multi-tool fusion)
-- [ ] Regression test harness
-- [ ] Explainability report generator
-- [ ] Signed patch provenance chain
-- [ ] End-to-end automated pipeline
-- [ ] Demo dashboard
+- [x] Environment + toolchain setup
+- [x] Demo vulnerable target
+- [x] Manual fuzzing baseline (AFL++)
+- [x] LLM-based crash triage
+- [x] Attack reachability graph (prototype)
+- [x] LLM-based patch generation (multi-candidate)
+- [x] Adversarial verification agent ("Cyber Courtroom")
+- [x] Confidence engine (multi-tool fusion)
+- [x] Regression test harness
+- [x] Explainability report generator
+- [x] Signed patch provenance chain
+- [x] End-to-end automated pipeline
+- [x] Demo dashboard
 
 ## Tech stack
 
