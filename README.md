@@ -19,6 +19,33 @@ The system is designed around a simple principle:
 > **A suspicious line is not automatically a vulnerability. A vulnerability decision should be supported by evidence.**
 
 ---
+Basic structure for Fuzzing and CodeQL- Heart of Pragyan-
+PRAGYAN_BHARAT_WORKSPACE/
+└── example_Candidate_Analysis/
+    ├── AFL++/
+    │   ├── seeds/
+    │   ├── findings/
+    │   ├── crashes/
+    │   └── AFL_compact.txt
+    ├── CodeQL/
+    │   ├── database/
+    │   ├── results/
+    │   └── CodeQL_compact.txt
+    ├── ASAN/
+    │   ├── logs/
+    │   └── ASAN_compact.txt
+    ├── UBSAN/
+    │   ├── logs/
+    │   └── UBSAN_compact.txt
+    ├── LLM/
+    │   ├── execution_plan.txt
+    │   ├── initial_analysis.txt
+    │   └── candidate_generation.txt
+    ├── Candidates/
+    │   ├── example_Candidate1.cpp
+    │   ├── example_Candidate2.cpp
+    │   └── example_Candidate3.cpp
+    └── FINAL_EVIDENCE.txt
 
 ## 1. Problem
 
