@@ -21,6 +21,7 @@ The system is designed around a simple principle:
 ---
 Basic structure for Fuzzing and CodeQL- Heart of Pragyan-
 PRAGYAN_BHARAT_WORKSPACE/
+PRAGYAN_BHARAT_WORKSPACE/
 └── example_Candidate_Analysis/
     ├── AFL++/
     │   ├── seeds/
