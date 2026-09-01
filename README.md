@@ -4,6 +4,8 @@
 
 > **AI Kavach — Autonomous Cyber Reasoning System**
 
+![Project Demo](targets/demo-target/Animation1.gif)
+
 > [!NOTE]
 > **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
 > * **Live Demos:** You can review working demonstrations and output artifacts inside the `targets/` folder.
