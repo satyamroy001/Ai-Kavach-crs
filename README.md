@@ -4,6 +4,12 @@
 
 > **AI Kavach — Autonomous Cyber Reasoning System**
 
+> [!NOTE]
+> **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
+> * **Live Demos:** You can review working demonstrations and output artifacts inside the `targets/` folder.
+> * **Fully Available Module:** **Stage Zero** (our Password and Sensitive Information Analyzer) is fully open and available to view in this repository- (password.py file).
+
+
 PRAGYAN-BHARAT is an offline-first, evidence-driven cyber reasoning system designed to investigate software vulnerabilities in security-critical and defence-relevant environments.
 
 Instead of relying on a single scanner or a single LLM decision, PRAGYAN-BHARAT combines **program structure, code property graphs, static analysis, dynamic execution evidence, sanitizers, fuzzing, and local LLM reasoning** to determine whether a suspected vulnerability is actually reachable, exploitable, and worth fixing.
