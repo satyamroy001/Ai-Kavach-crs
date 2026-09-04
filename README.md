@@ -6,6 +6,11 @@
 
 ![Project Demo](targets/demo-target/Animation1.gif)
 
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Live demo (update 04/09/2026) - AFL++ automatically generating seeds (seed file) based on REGEX (STDIN or FILE input) and TEXT based or NUMBER based segregations. 
+![Project Demo](targets/demo-target/Animation2.gif)
+
 > [!NOTE]
 > **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
 > * **Live Demos:** You can review working demonstrations and output artifacts inside the `targets/` folder.
