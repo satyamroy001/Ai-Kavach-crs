@@ -9,7 +9,7 @@
 > [!NOTE]
 > **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
 > * **Live Demos:** You can review working demonstrations and output artifacts inside the `targets/` folder.
-> * **Fully Available Module:** **Stage Zero** (our Password and Sensitive Information Analyzer) is fully open and available to view in this repository- (password.py file).
+> * **Fully Available Module:** **Stage Zero** (our Password and Sensitive Information Analyzer) is fully open and available to view in this repository- (password.py file). </br>
 >                               **CWE Dataset uploaded** (our self made compact CWE dataset) is fully open and available to view in this repository- ().
 
 PRAGYAN-BHARAT is an offline-first, evidence-driven cyber reasoning system designed to investigate software vulnerabilities in security-critical and defence-relevant environments.
