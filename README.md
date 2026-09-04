@@ -9,7 +9,12 @@
 -------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------
 Live demo (update 04/09/2026) - AFL++ automatically generating seeds (seed file) based on REGEX (STDIN or FILE input) and TEXT based or NUMBER based segregations. 
-![Project Demo](targets/demo-target/Animation2.gif)
+![AFL++ Demo](targets/demo-target/Animation2.gif)
+
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Live demo (update 04/09/2026) - Candidate generation (code continuation in chunks) as light weight model often hallucinates or generate half due to NUM_CTX limitations. (advanced algorithm implementation for chunking)
+![Candidate Demo](targets/demo-target/Animation2.gif)
 
 > [!NOTE]
 > **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
