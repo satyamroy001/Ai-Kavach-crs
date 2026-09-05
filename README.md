@@ -14,7 +14,12 @@ Live demo (update 04/09/2026) - AFL++ automatically generating seeds (seed file)
 -------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------
 Live demo (update 04/09/2026) - Candidate generation (code continuation in chunks) as light weight model often hallucinates or generate half due to NUM_CTX limitations. (advanced algorithm implementation for chunking)
-![Candidate Demo](targets/demo-target/Animation2.gif)
+![Candidate Demo](targets/demo-target/Animation3.gif)
+
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Live demo (update 05/09/2026) - Enhanced HTML file to capture live code difference after final verdict of candidates with judge.py file enhanced UI+ advanced drag and drop functionality.
+![HTML Demo](targets/demo-target/Animation4.gif)
 
 > [!NOTE]
 > **Repository Status:** Due to an ongoing evaluation and selection phase, core production code has been temporarily restricted. 
